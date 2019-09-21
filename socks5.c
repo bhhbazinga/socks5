@@ -729,10 +729,8 @@ static int tunnel_write_client(tunnel_t *tunnel, void *src, size_t size)
 static void accept_handle()
 {
 	int newfd;
-	sockaddr_t sa;
-	socklen_t len;
-	if ((newfd = accept(SERVER.listenfd, &sa, &len)) < 0) {
-		LOG("accept_handle failed,listenfd=%d", SERVER.listenfd);
+	if ((newfd = accept(SERVER.listenfd, NULL, NULL)) < 0) {
+		LOG("accept_handle failed,listenfd=%d,err=%s", SERVER.listenfd, strerror(errno));
 		return;
 	}
 
