@@ -19,18 +19,19 @@ make
 -k<optional> : password
 ```
 ## Example
-1.Run the server.\
-192.168.1.40 is an address on my virtual machine, you can simply replace it with your server address.
+1.Run the server.
 ```
 ./socks5 -a 192.168.1.40 -p 6080 -u abc123 -p qwe123
 ```
 2.Run a client such as Proxifier in windows.\
+![](https://github.com/bhhbazinga/socks5/blob/master/screenshot/1.png)
 3.Configure a socks5 proxy server using the address and port above.\
+![](https://github.com/bhhbazinga/socks5/blob/master/screenshot/2.png)
 4.Change the proxification rules using the socks5 proxy server we just configured.\
-
-That's it!\
-You can see the traffic going through our proxy server.Enjoy it!
+If you see the traffic passing through the socks5 proxy server, you succeeded.\
+Enjoy it!
 ## TODO
 - Asynchronous DNS resolutiuon and Cache
 - A socks5 client that connects the browser to the server
 - Encrypted transmitting
+- "BIND" and "ASSOCIATE" command may be supported
